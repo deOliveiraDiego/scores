@@ -5,6 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
 
+gem 'awesome_print', '~> 1.8'
+
 ruby '2.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

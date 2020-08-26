@@ -1,13 +1,15 @@
 <% @scores.each do |score| %>
   <div class="card mb-3">
     <div class="card-body">
-      <h5 class="card-title">Nome: <%= score.name %></h5>
-      <p class="card-subtitle">Cantor(a):</p>
+      <h5 class="card-text">Nome: <%= score.name %></h5>
+      <% if score.singer.present? %>
+        <p class="text-muted"> <%= score.singer.name  %> </p>
+      <% end %>
       <p class="card-text">Departamento:</p>
       <p class="card-text">Evento:</p>
-      <div class="card-footer">
-        <%= link_to "Visualizar", score.url, class: "btn btn-success" %>
-      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+      <%= link_to "Visualizar", score.url, class: "btn btn-success" %>
     </div>
   </div>
 <% end %>
